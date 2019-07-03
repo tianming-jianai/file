@@ -1,3 +1,10 @@
+--查看用户
+select * from dba_users; 查看数据库里面所有用户，前提是你是有dba权限的帐号，如sys,system
+
+select * from all_users;  查看你能管理的所有用户！
+
+select * from user_users; 查看当前用户信息 ！
+
 
 --创建用户
  CREATE USER 用户名 IDENTIFIED BY 密码;
@@ -5,6 +12,8 @@
 ALTER USER 用户名 IDENTIFIED BY 密码;
 --修改自己的密码
 PASSWORD 用户名;
+--删除用户
+
 
 
 CREATE TABLE studenet(
@@ -80,5 +89,4 @@ CREATE TABLE purchase(
 ALTER TABLE purchase DROP PRIMARY KEY;
 --添加主键约束
 ALTER TABLE purchase ADD CONSTRAINT pk_purchase PRIMARY KEY(customerId,goodsId);
---添加非空约束
-ALTER TABLE goods
+
