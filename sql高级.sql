@@ -49,5 +49,4 @@ declare
 begin
   sname:=sname||' and tom';
   dbms_output.put_line(sname);
-  
 end;

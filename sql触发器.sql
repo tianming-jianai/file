@@ -74,4 +74,53 @@
 		  END IF;
 		END;
 
-update u2 set sal=2000  where id=10;
+		update u2 set sal=2000  where id=10;
+		
+		
+		
+-------
+		--创建一张存储登录或者退出系统信息的表。
+		Create table log_table( username varchar2(20),
+		logon_time date,
+		logoff_time date, address varchar2(20));
+		--创建登录触发器：
+		Create or replace trigger mytrigger1
+		After logon on database
+		Begin
+		Insert into log_table(username, logon_time , address)
+		values(ora_login_user, sysdate, ora_client_ip_address);
+		End;
+		--创建退出触发器：
+		Create or replace trigger
+		Before logoff on database
+		Begin
+		Insert into log_table(username, logoff_time, address)
+		values(ora_login_user, sysdate , ora_client_ip_address);
+		End;
+--DDL 触发器：
+		--DDL 简单说就是我们平常使用的 create、alter 和 drop 这些数据定义语句。
+		
+		触发器管理
+		--1. 禁止触发器
+		指让触发器临时失效。
+		Alter trigger 触发器名 disable;
+		--2. 激活触发器
+		Alter trigger 触发器名 enable;
+		--3. 删除触发器
+		Drop trigger 触发器名;
+
+		
+		
+		CREATE TABLE my_ddl_record(
+		   eventt VARCHAR2(64),
+		   username VARCHAR2(64),
+		   ddl_time DATE
+		);
+
+
+		CREATE OR REPLACE TRIGGER mytrigger2
+		AFTER ddl ON scott.u2
+		BEGIN 
+		  INSERT INTO my_ddl_record VALUES (ora_sysevent,ora_login_user,
+		  SYSDATE);
+		END;
