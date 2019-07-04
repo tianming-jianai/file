@@ -1,0 +1,4 @@
+触发器的分类：
+		1. DML 触发器（insert 、delete 、update 触发器）
+		2. DDL 触发器（create table、create view 、drop table……）
+		3. 系统触发器（与系统相关的触发器，比如用户登录、退出、启动数据库、关闭数据库）
