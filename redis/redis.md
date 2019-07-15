@@ -6,6 +6,10 @@ json在线工具
 
 <https://www.sojson.com/>
 
+最全redis
+
+<https://www.bilibili.com/video/av54347890/?p=1>
+
 
 
 # **Redis是简介**
