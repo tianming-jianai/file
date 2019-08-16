@@ -90,12 +90,23 @@
 
     settings -- editor -- appearance -- 不勾选show parameter name hints
 
+13. idea控制台中文乱码
+
+    双击打开idea.vmoptions文件，追加-Dfile.encoding=UTF-8代码
+
+    在 [IntelliJ IDEA](https://link.zhihu.com/?target=https%3A//www.evget.com/product/2992)中的“Run/Debug Configurations”中，修改虚拟机参数“ VM options ”，内容与在文件idea.vmoptions中追加的内容相同，皆为-Dfile.encoding=UTF-8
+
+14. 取消拼写检查，打开 Settings->Inspection，取消“Spelling” 
+
+15. 
+
+    
+
     
 
     
 
 <hr/>
-
 ### 其他设置：
 
 6、关闭自动保存，打开 Settings-General，反选“Synchronize file on frame activation”和“Save files on frame deactivation”。同时修改未保存的显示星号，打开 Settings-Editor->Editor Tabs， 勾上“Mark modified tabs with asterisk”。 
@@ -356,4 +367,11 @@ startup/Shutdown下：
 
 
 
+
+# DeBug
+
+### intellij 进入debug模式打断点时提示叉号
+
+查看叉号的信息，显示No executable code found at line 39 in class 包名.类名,
+我这一行是java代码中的一行
 
