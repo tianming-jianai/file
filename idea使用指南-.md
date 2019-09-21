@@ -70,13 +70,9 @@
 
    勾选：optimize imports on the fly (for current project)
 
-10. 鼠标悬浮于类上，显示文档提示：
+10. 鼠标悬浮于类、方法上，显示文档提示：
 
-    editor -- general
-
-    other下：
-
-    show quick documentation on mouse move
+    打开file-->setting-->Editor-->General，搜索show，然后勾选上Show quick documentation on mouse move(将信息在鼠标移动到方法上时进行提示)
 
 11. 设置同时打开多个文件且分行显示？
 
@@ -375,3 +371,11 @@ startup/Shutdown下：
 查看叉号的信息，显示No executable code found at line 39 in class 包名.类名,
 我这一行是java代码中的一行
 
+
+
+
+
+该地址有你想要的颜色背景设置：
+地址1：http://www.riaway.com/ 比较少
+
+地址2： http://www.themesmap.com/theme.html?t=down 这个地址贼多 几百种 很强势
