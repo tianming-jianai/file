@@ -90,6 +90,14 @@
 
     settings -- editor -- appearance -- 不勾选show parameter name hints
 
+13. 解决 xml 文件空行部分黄色背景的办法很简单。
+
+    鼠标放在 xml 文件中（就是打开对应的xml 文件，不需要鼠标选定），然后按下
+
+    ALT+ENTER 选择 un-inject Language/refence 即可。
+
+14. 
+
     
 
     

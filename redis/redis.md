@@ -387,3 +387,164 @@ redis-cli -h host -p port -a password
 **通过 ps –ef | grep –i redis  查看当前进程：**
 
 ![img](https://note.youdao.com/yws/public/resource/bfcc478547c920926146675e678e4a1f/xmlnote/OFFICE33C65FCCD35D41B6B68D19026E3C00A0/6152)
+
+
+
+
+
+
+
+# redis典型应用场景
+
+缓存系统：
+
+​	user --> AppServer 
+
+​			cache	appserver首先先从缓存中获取数据，如果有就返回给用户，没有就从Storage中获取，然后将Storage中的数据缓存到cache中，方便下次获取
+
+​			Storage	硬盘
+
+计数器：
+
+消息队列系统：
+
+排行榜
+
+社交网络
+
+实时系统：垃圾、邮件系统、
+
+<hr>
+
+redis特性：
+
+速度快				功能丰富
+
+持久化				简单
+
+多种数据结构			主从复制
+
+支持多种编辑语言		高可用、分布式
+
+<hr/>
+
+redis安装
+
+wget http://download.redis.io/releases/redis-3.0.7.tar.gz
+
+tar -xzf redis-3.0.7.tar.gz
+
+ln -s redis-3.0.7 redis
+
+cd redis
+
+make 编译& make install 安装
+
+<hr/>
+
+redis可执行文件说明
+
+redis-server			redis服务器
+
+redis-cli				redis命令行客户端
+
+redis-benchmark			redis性能测试
+
+redis-check-aof			aof文件修复工具
+
+redis-check-rdb			rdb文件修复工具
+
+redis-sentinel 			sentinel服务器
+
+<hr/>
+
+三种启动方法：
+
+​	最简启动：
+
+​		redis-server
+
+​	动态参数启动：
+
+​		redis-server --port 6380
+
+​	配置文件启动：
+
+​		redis-server configPath
+
+​	注：生产环境选择配置文件方式启动
+
+​		单机多实例配置文件可以用端口区分开
+
+验证启动：
+
+​	查看进程方式：ps -ef  grep redis
+
+​	查看端口方式：netstat -antpl | grep redis
+
+​	redis-cli -h ip -port ping
+
+redis客户端返回值：
+
+​	状态回复：ping 		pong
+
+​	错误回复：hget hello	error
+
+​	整数回复：incr hello 	1
+
+​	字符串回复：get hello		world
+
+​	多行字符串回复：mget hello world
+
+<hr/>
+
+常用配置：
+
+daemonize		是否是守护进程
+
+port			redis对外端口号
+
+logfile			redis系统日志
+
+dir			     redis工作目录
+
+获取配置属性：config get *
+
+<hr/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

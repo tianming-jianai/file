@@ -40,8 +40,28 @@ MySQL基础+高级篇-尚硅谷(女老师)
 https://www.bilibili.com/video/av49181542?p=2
 
 
+--------------------------------------------------
+
+https://www.cnblogs.com/jajian/p/11001084.html
+一款简单干净的博客园主题
 
 
+Spring Boot 中文索引
+http://springboot.fun/
+
+
+
+
+2019Redis从入门到大师【千锋Java达摩院】
+https://www.bilibili.com/video/av54577601/?p=25
+
+Python教程_600集Python从入门到精通教程（懂中文就能学会）
+https://www.bilibili.com/video/av14184325?from=search&seid=7426987453770524477
+
+linux笔记
+https://blog.csdn.net/jiandan1127/article/category/8054216
+python笔记
+https://blog.csdn.net/jiandan1127/article/category/8084403/3
 
 
 
