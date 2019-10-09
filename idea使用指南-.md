@@ -70,13 +70,9 @@
 
    勾选：optimize imports on the fly (for current project)
 
-10. 鼠标悬浮于类上，显示文档提示：
+10. 鼠标悬浮于类、方法上，显示文档提示：
 
-    editor -- general
-
-    other下：
-
-    show quick documentation on mouse move
+    打开file-->setting-->Editor-->General，搜索show，然后勾选上Show quick documentation on mouse move(将信息在鼠标移动到方法上时进行提示)
 
 11. 设置同时打开多个文件且分行显示？
 
@@ -96,14 +92,16 @@
 
     ALT+ENTER 选择 un-inject Language/refence 即可。
 
-14. 
+14. idea控制台中文乱码
 
-    
+    双击打开idea.vmoptions文件，追加-Dfile.encoding=UTF-8代码
 
+    在 [IntelliJ IDEA](https://link.zhihu.com/?target=https%3A//www.evget.com/product/2992)中的“Run/Debug Configurations”中，修改虚拟机参数“ VM options ”，内容与在文件idea.vmoptions中追加的内容相同，皆为-Dfile.encoding=UTF-8
+
+15. 取消拼写检查，打开 Settings->Inspection，取消“Spelling” 
     
 
 <hr/>
-
 ### 其他设置：
 
 6、关闭自动保存，打开 Settings-General，反选“Synchronize file on frame activation”和“Save files on frame deactivation”。同时修改未保存的显示星号，打开 Settings-Editor->Editor Tabs， 勾上“Mark modified tabs with asterisk”。 
@@ -365,3 +363,18 @@ startup/Shutdown下：
 
 
 
+# DeBug
+
+### intellij 进入debug模式打断点时提示叉号
+
+查看叉号的信息，显示No executable code found at line 39 in class 包名.类名,
+我这一行是java代码中的一行
+
+
+
+
+
+该地址有你想要的颜色背景设置：
+地址1：http://www.riaway.com/ 比较少
+
+地址2： http://www.themesmap.com/theme.html?t=down 这个地址贼多 几百种 很强势
