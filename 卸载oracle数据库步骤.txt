@@ -1,0 +1,50 @@
+从Oracle 11gR2开始，oracle推荐使用deinstall来卸载Oracle数据库。使用Oracle Universal Install(OUI) 的图形方式来卸载Oracle数据库软件了，会看到下图警告:
+"请运行命令D:\app\admin\product\11.2.0\dbhome_1\deinstall\deinstall"来卸载此Oracle主目录"
+
+
+如果deinstall遇到了麻烦，也可以考虑手工删除Oracle数据库，方法如下：
+
+第一步：停用全部oracle服务
+
+第二步：删除oracle注册表
+运行regedit在如下路径中找到oracle相关键值，删除
+??? HKEY_LOCAL_MACHINE\SOFTWARE
+??? HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services
+??? HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Eventlog\Application
+
+第三步：删除物理文件，有如下两个文件夹（有dll等文件正在使用请跳过该文件）
+1、x:\app\...? 此目录为默认oracle安装主目录，连通app全删掉。
+2、x:\Program Files\Oracle\... 此目录为inventory内容连同oracle全部删除掉。
+
+第四步：删除系统变量Path中的oracle变量
+
+第五步：重启，然后删除第三步中未删掉内容
+
+
+
+
+
+
+
+完全卸载oracle11g步骤 
+完全卸载oracle11g步骤：
+1、 开始－＞设置－＞控制面板－＞管理工具－＞服务 停止所有Oracle服务。
+2、 开始－＞程序－＞Oracle - OraHome81－＞Oracle Installation Products－＞ Universal Installer，单击“卸载产品”-“全部展开”，选中除“OraDb11g_home1”外的全部目录，删除。
+5、 运行regedit，选择HKEY_LOCAL_MACHINE\SOFTWARE\ORACLE，按del键删除这个入口。
+6、 运行regedit，选择HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services，滚动这个列表，删除所有Oracle入口(以oracle或OraWeb开头的键)。
+7、 运行refedit，HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Eventlog\Application，删除所有Oracle入口。
+8、 删除HKEY_CLASSES_ROOT目录下所有以Ora、Oracle、Orcl或EnumOra为前缀的键。
+9、 删除HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MenuOrder\Start Menu\Programs中所有以oracle开头的键。
+10、删除HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCINST.INI中除Microsoft ODBC for Oracle注册表键以外的所有含有Oracle的键。
+11、我的电脑-->属性-->高级-->环境变量,删除环境变量CLASSPATH和PATH中有关Oracle的设定。
+12、从桌面上、STARTUP（启动）组、程序菜单中，删除所有有关Oracle的组和图标。
+13、删除所有与Oracle相关的目录(如果删不掉，重启计算机后再删就可以了)包括：
+??? 1.C:\Program file\Oracle目录。
+??? 2.ORACLE_BASE目录(oracle的安装目录)。
+??? 3.C:\WINDOWS\system32\config\systemprofile\Oracle目录。
+??? 4.C:\Users\Administrator\Oracle或C:\Documents and Settings\Administrator\Oracle目录。
+??? 5.C:\WINDOWS下删除以下文件ORACLE.INI、oradim73.INI、oradim80.INI、oraodbc.ini等等。
+??? 6.C:\WINDOWS下的WIN.INI文件中若有[ORACLE]的标记段，删除该段。
+14、如有必要，删除所有Oracle相关的ODBC的DSN
+15、到事件查看器中，删除Oracle相关的日志 说明： 如果有个别DLL文件无法删除的情况，则不用理会，重新启动，开始新的安装，安装时，选择一个新的目录，则，安装完毕并重新启动后，老的目录及文件就可以删除掉了。
+最后删除：安装时的app根目录。例如在E:\app，就删除E盘中的app文件。
